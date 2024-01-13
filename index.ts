@@ -42,7 +42,7 @@ class Singer {
     }
 }
 
-const prince = new Singer(0, 'Prince', false)
+const prince = new Singer(0, '34', false)
 
 console.log(prince);
 
