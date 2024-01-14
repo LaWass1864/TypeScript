@@ -32,9 +32,9 @@ let zidane:Player = {
 class Singer {
     id:  number;
     name: string;
-    alive: boolean
+    alive?: boolean
 
-    constructor(id: number, name: string, alive: boolean)
+    constructor(id: number, name: string , alive?: boolean)
     {
     this.id = id;
     this.name = name;
@@ -42,7 +42,48 @@ class Singer {
     }
 }
 
-const prince = new Singer(0, '34', false)
+const prince = new Singer(0, 'theWeeknd')
 
 console.log(prince);
+
+// Functions
+
+const sayMyName = (name?: string) => {
+    console.log(`bonjour ${name}`);
+}
+
+sayMyName('Wass');
+
+const ageducapitaine = (age: number | string, size?:number): void => {
+    if (size) {
+        console.log(`La taille du capitaine est de ${size} cm et il est agé de : ${age}`);
+    } else {
+    console.log(`Le capitaine est agé de : ${age} ans`);
+    }
+}
+ageducapitaine(16, 185)
+
+// Enum et Tuple
+// Tuple
+interface User {
+    name: string;
+    attributes: [number | boolean, string]
+    role: Role
+}
+// Enum = pour les roles 
+enum Role {ADMIN, PREMIUM, BASIC}
+
+
+const user1:User = {
+    name: "Julien",
+    attributes: [34, 'author'],
+    // Si membre admin, membre premium
+    role:  Role.BASIC
+}
+if (user1.role === Role.ADMIN) {
+    console.log('connexion spéciale');
+    
+    
+}
+console.log(user1.role);
 

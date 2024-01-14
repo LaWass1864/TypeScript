@@ -11,7 +11,13 @@ let player = {
     id:0,
     name: "Zidane",
 }
-const sayName = () => {
+const sayPlayerName= () => {
     console.log(player.suname);
 }
-sayName();
+sayPlayerName();
+
+const sayName = name => {
+    console.log(`bonjour ${name}`);
+}
+
+sayName()
